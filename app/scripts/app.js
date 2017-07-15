@@ -11,7 +11,8 @@
 angular
   .module('practica2App', [
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'Alertify'
   ])
   .config(function ($routeProvider) {
     $routeProvider
