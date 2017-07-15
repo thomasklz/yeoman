@@ -1,0 +1,12 @@
+<h1>Galeria de Fotos</h1>
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="contentImage in contentImagen">
+    <div class="thumbnail">
+      <img src="{{contentImage.url}}" alt="...">
+      <div class="caption">
+        <h3>{{contentImage.title}}</h3>
+        <p>{{contentImage.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
