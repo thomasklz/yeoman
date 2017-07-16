@@ -11,8 +11,11 @@
 angular
   .module('practica2App', [
     'ngRoute',
+    'ngAnimate',
+    'ngSanitize',
     'ngTouch',
-    'Alertify'
+    'Alertify',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
