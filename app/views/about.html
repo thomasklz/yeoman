@@ -3,3 +3,22 @@
 <p>Alerta Log<span class="label label-info" ng-click="AlertyInfo()">Click</span></p>
 <p>Alerta Mensaje <span class="label label-warning" ng-click="AlertaMensaje()">Click</span></p>
 <p>Dialogo de confirmación <span class="label label-warning" ng-click="ConfirmDialog()">Click</span></p>
+
+<button type="button" ng-click="showModal()" class="btn btn-success">Nuevo miembro</button>
+
+<div class="col-md-12">
+  <table class="table table-striped">
+    <caption>Lista de personas
+      <tr>
+        <th>Nombre</th>
+        <th>Ciudad</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="data in datos | orderBy: 'name'">
+          <td>{{data.name}}</td>
+          <td>{{data.city}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
