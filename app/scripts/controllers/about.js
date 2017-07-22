@@ -10,6 +10,7 @@
 angular.module('practica2App')
   .controller('AboutCtrl', function ($scope,Alertify, $uibModal) {
   	
+   
     $scope.datos = [
         {"name" : "Bottom-Dollar Marketse" ,"city" : "Tsawassen"},
         {"name" : "Alfreds Futterkiste", "city" : "Berlin"},
@@ -39,11 +40,11 @@ angular.module('practica2App')
         	 Alertify.error("Error!"); }
       )
     };
-
+    $scope.formVisibility='PIPOS';
     //ventana modal
     $scope.showModal=function(){
      $scope.newClients={};
-  
+    
       var modalInstance = $uibModal.open({
         templateUrl: 'views/modal/newClient.html',
         controller:'myModalController',
@@ -58,6 +59,7 @@ angular.module('practica2App')
 
       //proceso una vez cerrada la ventana modal
       modalInstance.result.then(function () {
+
            $scope.datos.push({name:$scope.newClients.newName, city:$scope.newClients.newCity});
       });
 

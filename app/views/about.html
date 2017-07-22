@@ -6,7 +6,7 @@
 
 <button type="button" ng-click="showModal()" class="btn btn-success">Nuevo miembro</button>
 
-<div class="col-md-12">
+<div class="col-md-12" ng-show="formVisibility=='PIPO'">
   <table class="table table-striped">
     <caption>Lista de personas
       <tr>
@@ -22,3 +22,5 @@
       </tbody>
   </table>
 </div>
+
+<dtable options="options" rows="data" class="material" on-page="paging(offset, size)"></dtable>

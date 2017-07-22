@@ -17,6 +17,8 @@ angular
     'Alertify',
     'ui.bootstrap'
   ])
+  .constant("RUTA_API","http://localhost:88/tesis/SistGestion/web/api/v0/")
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -33,6 +35,11 @@ angular
         templateUrl: 'views/imagenes.html',
         controller: 'ImagenesCtrl',
         controllerAs: 'imagenes'
+      })
+      .when('/usuarios', {
+        templateUrl: 'views/usuarios.html',
+        controller: 'UsuariosCtrl',
+        controllerAs: 'usuarios'
       })
       .otherwise({
         redirectTo: '/'
